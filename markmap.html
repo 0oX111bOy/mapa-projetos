@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Ciclo de Vida de Projetos</title>
-  <style>
-    html, body, #mindmap {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"></script>
+<meta charset="UTF-8">
+<title>Ciclo de Vida de Projetos</title>
+
+<style>
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#mindmap {
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
 </head>
+
 <body>
-  <div class="markmap">
+
+<svg id="mindmap"></svg>
+
+<script>
+const { Transformer } = window.markmap;
+const { Markmap } = window.markmap;
+
+const markdown = `
 # Ciclo de Vida e Governança de Projetos
 
 ## Necessidade / Oportunidade
@@ -31,6 +48,7 @@
 - Encaminhamento para análise de viabilidade
 
 ## AVI - Análise de Viabilidade
+
 ### Elementos
 - Problema
 - Contexto
@@ -53,7 +71,7 @@
 ## Decisão Institucional
 - Aprovar
 - Aprovar com condicionantes
-- Complementar (retorna para AVI)
+- Complementar
 - Arquivar
 
 ## TAP - Termo de Abertura do Projeto
@@ -66,14 +84,14 @@
 - Restrições
 - Orçamento de referência
 - Prazo de referência
-- Autoridade do gerente do projeto
+- Autoridade
 
 ## PGP - Plano de Gerenciamento do Projeto
+
 ### Governança
 - Estrutura de governança
 - Papéis e responsabilidades
 - Instâncias decisórias
-- Critérios de escalonamento
 
 ### Escopo Detalhado
 - EAP
@@ -90,12 +108,12 @@
 - Aquisições
 - Mudanças
 
-### Linha de Base do Projeto
+### Linha de Base
 - Escopo
 - Prazo
 - Custos
 
-## Autorização para Execução
+## Aprovação do Planejamento
 - Aprovar execução
 - Aprovar com condicionantes
 - Solicitar ajustes
@@ -104,9 +122,10 @@
 ## Execução
 
 ## Monitoramento e Controle
+
 ### Relatórios e Registros
-- RAP (Relatório de Acompanhamento do Projeto)
-- Indicadores de desempenho
+- RAP
+- Indicadores
 - Registro de riscos
 - Registro de mudanças
 - Registro de decisões
@@ -118,7 +137,6 @@
 - Custos
 - Qualidade
 - Conformidade
-- Benefícios previstos
 
 ## Encerramento
 - Aceite formal
@@ -126,7 +144,20 @@
 - Avaliação dos resultados
 - Lições aprendidas
 - Arquivamento
-- Encerramento administrativo
-  </div>
+`;
+
+const transformer = new Transformer();
+const { root } = transformer.transform(markdown);
+
+const mm = Markmap.create('#mindmap', {
+  autoFit: true,
+  fitRatio: 0.95,
+  duration: 500
+}, root);
+
+setTimeout(() => mm.fit(), 500);
+window.addEventListener('resize', () => mm.fit());
+</script>
+
 </body>
 </html>
