@@ -1,33 +1,156 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
+<script>
+((l,U,M,R)=>{
+const N=l();
+
+window.mm=N.Markmap.create("svg#mindmap",
+  (U||N.deriveOptions)(R),
+  M
+);
+
+window.matchMedia("(prefers-color-scheme: dark)").matches &&
+  document.documentElement.classList.add("markmap-dark");
+
+})(()=>window.markmap,null,{
+"content":"Ciclo de Vida e Governança de Projetos",
+"children":[
+
+{
+  "content":"Necessidade / Oportunidade",
+  "children":[
+    {"content":"Problema"},
+    {"content":"Obrigação legal"},
+    {"content":"Diretriz estratégica"},
+    {"content":"Inovação"},
+    {"content":"Demanda institucional"}
+  ]
+},
+
+{
+  "content":"Portfólio Institucional",
+  "children":[
+    {"content":"Priorização estratégica"},
+    {"content":"Seleção de iniciativas"}
+  ]
+},
+
+{
+  "content":"AVI - Análise de Viabilidade",
+  "children":[
+    {
+      "content":"Elementos",
+      "children":[
+        {"content":"Problema"},
+        {"content":"Contexto"},
+        {"content":"Benefícios"},
+        {"content":"Alinhamento estratégico"},
+        {"content":"Alternativas"}
+      ]
+    },
+    {
+      "content":"Viabilidade",
+      "children":[
+        {"content":"Técnica"},
+        {"content":"Operacional"},
+        {"content":"Financeira"},
+        {"content":"Legal"},
+        {"content":"Temporal"}
+      ]
+    },
+    {"content":"Riscos preliminares"},
+    {"content":"Priorização"},
+    {"content":"Recomendação"}
+  ]
+},
+
+{
+  "content":"Decisão Institucional",
+  "children":[
+    {"content":"Aprovar"},
+    {"content":"Aprovar com condicionantes"},
+    {"content":"Complementar (retorna para AVI)"},
+    {"content":"Arquivar"}
+  ]
+},
+
+{
+  "content":"TAP - Termo de Abertura",
+  "children":[
+    {"content":"Formalização"},
+    {"content":"Patrocinador"},
+    {"content":"Gerente"},
+    {"content":"Objetivo"},
+    {"content":"Escopo preliminar"},
+    {"content":"Premissas"},
+    {"content":"Restrições"},
+    {"content":"Orçamento"},
+    {"content":"Prazo referência"},
+    {"content":"Autoridade"}
+  ]
+},
+
+{
+  "content":"PGP - Plano de Gerenciamento",
+  "children":[
+    {"content":"Governança"},
+    {
+      "content":"Escopo detalhado",
+      "children":[
+        {"content":"EAP"},
+        {"content":"Dicionário da EAP"}
+      ]
+    },
+    {
+      "content":"Planejamento",
+      "children":[
+        {"content":"Cronograma"},
+        {"content":"Custos"},
+        {"content":"Qualidade"},
+        {"content":"Conformidade"},
+        {"content":"Riscos"},
+        {"content":"Recursos"},
+        {"content":"Comunicações"},
+        {"content":"Aquisições"},
+        {"content":"Mudanças"}
+      ]
+    },
+    {
+      "content":"Resultado",
+      "children":[
+        {"content":"Planejamento aprovado"},
+        {"content":"Linha de Base do Projeto"}
+      ]
+    }
+  ]
+},
+
+{
+  "content":"Execução",
+  "children":[
+    {"content":"Entrega de produtos/serviços"}
+  ]
+},
+
+{
+  "content":"Monitoramento e Controle",
+  "children":[
+    {"content":"RAP - Relatórios"},
+    {"content":"Registro de riscos"},
+    {"content":"Registro de mudanças"},
+    {"content":"Indicadores de desempenho"},
+    {"content":"Decisões"}
+  ]
+},
+
+{
+  "content":"Encerramento",
+  "children":[
+    {"content":"Aceite"},
+    {"content":"Conformidade"},
+    {"content":"Lições aprendidas"},
+    {"content":"Arquivamento"}
+  ]
 }
-html {
-  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-.markmap-dark {
-  background: #27272a;
-  color: white;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
-</head>
-<body>
-<svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(()=>{setTimeout(()=>{const{markmap:S,mm:Q}=window,$=new S.Toolbar;$.attach(Q);const I=$.render();I.setAttribute("style","position:absolute;bottom:20px;right:20px"),document.body.append(I)})})()</script><script>((l,U,M,R)=>{const N=l();window.mm=N.Markmap.create("svg#mindmap",(U||N.deriveOptions)(R),M),window.matchMedia("(prefers-color-scheme: dark)").matches&&document.documentElement.classList.add("markmap-dark")})(()=>window.markmap,null,{"content":"Fluxo de Gest&#xe3;o de Projetos","children":[{"content":"Necessidade / Oportunidade","children":[{"content":"Problema","children":[],"payload":{"tag":"li","lines":"3,4"}},{"content":"Obriga&#xe7;&#xe3;o legal","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"Diretriz estrat&#xe9;gica","children":[],"payload":{"tag":"li","lines":"5,6"}},{"content":"Inova&#xe7;&#xe3;o","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"Demanda institucional","children":[],"payload":{"tag":"li","lines":"7,9"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"AVI - An&#xe1;lise de Viabilidade","children":[{"content":"Elementos","children":[{"content":"Problema","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"Contexto","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"Benef&#xed;cios","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"Alinhamento Estrat&#xe9;gico","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"Alternativas","children":[],"payload":{"tag":"li","lines":"15,17"}}],"payload":{"tag":"h3","lines":"10,11"}},{"content":"Viabilidade","children":[{"content":"\n<p data-lines=\"18,19\">T&#xe9;cnica</p>","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"\n<p data-lines=\"19,20\">Operacional</p>","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"\n<p data-lines=\"20,21\">Financeira</p>","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"\n<p data-lines=\"21,22\">Legal</p>","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"\n<p data-lines=\"22,23\">Temporal</p>","children":[],"payload":{"tag":"li","lines":"22,24"}},{"content":"\n<p data-lines=\"24,25\">Riscos Preliminares</p>","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"\n<p data-lines=\"25,26\">Prioriza&#xe7;&#xe3;o</p>","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"\n<p data-lines=\"26,27\">Recomenda&#xe7;&#xe3;o</p>","children":[],"payload":{"tag":"li","lines":"26,28"}}],"payload":{"tag":"h3","lines":"17,18"}}],"payload":{"tag":"h2","lines":"9,10"}},{"content":"Gate 0 - Decis&#xe3;o Institucional","children":[{"content":"Aprovar","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"Aprovar com condicionantes","children":[],"payload":{"tag":"li","lines":"30,31"}},{"content":"Complementar <em>(retorna para AVI)</em>","children":[],"payload":{"tag":"li","lines":"31,32"}},{"content":"Arquivar","children":[],"payload":{"tag":"li","lines":"32,34"}}],"payload":{"tag":"h2","lines":"28,29"}},{"content":"TAP - Termo de Abertura","children":[{"content":"Formaliza&#xe7;&#xe3;o","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"Patrocinador","children":[],"payload":{"tag":"li","lines":"36,37"}},{"content":"Gerente","children":[],"payload":{"tag":"li","lines":"37,38"}},{"content":"Objetivo","children":[],"payload":{"tag":"li","lines":"38,39"}},{"content":"Escopo preliminar","children":[],"payload":{"tag":"li","lines":"39,40"}},{"content":"Premissas","children":[],"payload":{"tag":"li","lines":"40,41"}},{"content":"Restri&#xe7;&#xf5;es","children":[],"payload":{"tag":"li","lines":"41,42"}},{"content":"Or&#xe7;amento","children":[],"payload":{"tag":"li","lines":"42,43"}},{"content":"Prazo refer&#xea;ncia","children":[],"payload":{"tag":"li","lines":"43,44"}},{"content":"Autoridade","children":[],"payload":{"tag":"li","lines":"44,46"}}],"payload":{"tag":"h2","lines":"34,35"}},{"content":"Autoriza&#xe7;&#xe3;o Formal do Projeto","children":[],"payload":{"tag":"h2","lines":"46,47"}},{"content":"PGP - Plano de Gerenciamento","children":[{"content":"Governan&#xe7;a","children":[],"payload":{"tag":"h3","lines":"49,50"}},{"content":"Escopo detalhado","children":[{"content":"EAP","children":[],"payload":{"tag":"li","lines":"52,53"}},{"content":"Dicion&#xe1;rio da EAP","children":[],"payload":{"tag":"li","lines":"53,55"}}],"payload":{"tag":"h3","lines":"51,52"}},{"content":"Planejamento","children":[{"content":"Cronograma","children":[],"payload":{"tag":"li","lines":"56,57"}},{"content":"Custos","children":[],"payload":{"tag":"li","lines":"57,58"}},{"content":"Qualidade","children":[],"payload":{"tag":"li","lines":"58,59"}},{"content":"Conformidade","children":[],"payload":{"tag":"li","lines":"59,60"}},{"content":"Riscos","children":[],"payload":{"tag":"li","lines":"60,61"}},{"content":"Recursos","children":[],"payload":{"tag":"li","lines":"61,62"}},{"content":"Comunica&#xe7;&#xf5;es","children":[],"payload":{"tag":"li","lines":"62,63"}},{"content":"Aquisi&#xe7;&#xf5;es","children":[],"payload":{"tag":"li","lines":"63,64"}},{"content":"Mudan&#xe7;as","children":[],"payload":{"tag":"li","lines":"64,65"}},{"content":"Monitoramento","children":[],"payload":{"tag":"li","lines":"65,67"}}],"payload":{"tag":"h3","lines":"55,56"}}],"payload":{"tag":"h2","lines":"48,49"}},{"content":"Linha de Base do Projeto","children":[],"payload":{"tag":"h2","lines":"67,68"}},{"content":"Execu&#xe7;&#xe3;o","children":[],"payload":{"tag":"h2","lines":"69,70"}},{"content":"Monitoramento","children":[{"content":"RAP (Relat&#xf3;rio de Acompanhamento)","children":[],"payload":{"tag":"li","lines":"72,74"}}],"payload":{"tag":"h2","lines":"71,72"}},{"content":"Encerramento","children":[{"content":"Aceite","children":[],"payload":{"tag":"li","lines":"75,76"}},{"content":"Conformidade","children":[],"payload":{"tag":"li","lines":"76,77"}},{"content":"Li&#xe7;&#xf5;es aprendidas","children":[],"payload":{"tag":"li","lines":"77,78"}},{"content":"Arquivamento","children":[],"payload":{"tag":"li","lines":"78,79"}}],"payload":{"tag":"h2","lines":"74,75"}}],"payload":{"tag":"h1","lines":"0,1"}},null)</script>
-</body>
-</html>
+
+]
+},null)
+</script>
