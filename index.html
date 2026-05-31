@@ -27,8 +27,8 @@ html {
 /* ✅ MARCA D’ÁGUA */
 .watermark {
   position: fixed;
-  bottom: 20px;          /* canto inferior */
-  right: 20px;           /* canto direito */
+  bottom: 20px;
+  left: 20px;
   top: auto;
   left: auto;
   transform: none;
@@ -39,7 +39,7 @@ html {
 }
 
 .watermark img {
-  width: 300px;          /* 25% menor que os 400px originais */
+  width: 200px;
   max-width: 25vw;
 }
 
@@ -47,12 +47,12 @@ html {
 @media (max-width: 768px) {
   .watermark {
     bottom: 10px;
-    right: 10px;
+    left: 10px;
     opacity: 0.05;
   }
 
   .watermark img {
-    width: 165px;        /* 25% menor que os 220px originais */
+    width: 120px;
   }
 }
 
