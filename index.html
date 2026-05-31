@@ -30,23 +30,26 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-30deg);
-  font-size: 32px;
-  white-space: nowrap;
   pointer-events: none;
   z-index: 0;
-  width: 200%;
-  text-align: center;
-  font-weight: bold;
+  opacity: 0.08;
+}
+
+.watermark img {
+  width: 400px;   /* tamanho desktop */
+  max-width: 80vw;
 }
 
 /* ✅ AJUSTE MOBILE (COLE AQUI 👇) */
 @media (max-width: 768px) {
   .watermark {
-    font-size: 22px;
-    transform: translate(-50%, -50%) rotate(-20deg);
-    width: 300%;
-    opacity: 0.06;
-    letter-spacing: 1px;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    opacity: 0.05;
+    top: 55%;
+  }
+
+  .watermark img {
+    width: 220px;
   }
 }
 
@@ -68,9 +71,11 @@ html {
 <body>
 
 <!-- ✅ INÍCIO — MARCA D’ÁGUA -->
+
 <div class="watermark">
-  IPEM/SP – Instituto de Pesos e Medidas do Estado de São Paulo
+  <img src="logo-ipem.png" alt="IPEM/SP">
 </div>
+
 <!-- ✅ FIM — MARCA D’ÁGUA -->
 
 <svg id="mindmap"></svg>
