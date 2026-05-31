@@ -24,23 +24,45 @@ html {
   color: white;
 }
 
-/* ✅ MARCA D’ÁGUA */
 .watermark {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  top: auto;
-  right: auto;
-  transform: none;
-
   pointer-events: none;
   z-index: 0;
   opacity: 0.10;
+  width: 200px;
 }
 
+/* Ambas ocupam exatamente o mesmo espaço */
 .watermark img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 200px;
   max-width: 25vw;
+}
+
+/* Mostra logo CLARO no modo padrão */
+.logo-claro,
+.logo-escuro {
+  transition: opacity 0.3s ease;
+}
+
+.logo-claro {
+  opacity: 1;
+}
+
+.logo-escuro {
+  opacity: 0;
+}
+
+.markmap-dark .logo-claro {
+  opacity: 0;
+}
+
+.markmap-dark .logo-escuro {
+  opacity: 1;
 }
 
 /* MOBILE */
@@ -76,7 +98,8 @@ html {
 <!-- ✅ INÍCIO — MARCA D’ÁGUA -->
 
 <div class="watermark">
-  <img src="logoCOR-alta.jpg" alt="IPEM/SP">
+  <img class="logo-claro" src="logoCOR-alta.jpg" alt="IPEM/SP">
+  <img class="logo-escuro" src="logonegCOR_alta.jpg" alt="IPEM/SP">
 </div>
 
 <!-- ✅ FIM — MARCA D’ÁGUA -->
